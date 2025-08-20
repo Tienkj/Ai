@@ -133,7 +133,7 @@
     </div>
 
     <script>
-        const API_KEY = 'AIzaSyD3BYgmogSBufZo14SCkWIVf4Q8C8GbGHg'; 
+        const API_KEY = 'AIzaSyD3BYgmogSBufZo14SCkWIVf4Q8C8GbGHg'; //Keey này miễn phí thích lấy thì lấy OKE
         let userName = '';
 
         function startChat() {
@@ -149,7 +149,7 @@
             document.getElementById('inputContainer').classList.remove('chat-box-hidden');
             document.getElementById('chatHeader').innerHTML = `<h3>Chào ${userName}!</h3>`;
             
-            // Send initial greeting from bot
+           
             addBotMessage(`Xin chào ${userName}! Tôi là chatbot do Tiến tạo ra. Bạn muốn trò chuyện về điều gì?`);
         }
 
@@ -159,13 +159,13 @@
 
             if (messageText === "") return;
 
-            // Add user message to chat
+           
             addUserMessage(messageText);
 
-            // Send message to Gemini API
+           
             fetchGeminiResponse(messageText);
 
-            // Clear the input field
+       
             messageInput.value = '';
         }
 
@@ -188,7 +188,7 @@
         }
 
         async function fetchGeminiResponse(message) {
-            // Customize responses for specific questions
+            
             const lowercaseMessage = message.toLowerCase();
             if (lowercaseMessage.includes('bạn là ai') || lowercaseMessage.includes('bot là gì')) {
                 addBotMessage("Tôi là chatbot do Tiến tạo ra. Tên tôi là Tiến, một AI do Tiến Cao phát triển.");
